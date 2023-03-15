@@ -9,12 +9,19 @@ import MovieCard from "./MovieCard";
 
 const API_URL = "http://www.omdbapi.com/?apikey=f95bafff";
 
+const movie1 = {
+  Title: "Spiderman the Verse",
+  Year: "2019",
+  imdbID: "tt12122034",
+  Type: "series",
+  Poster: "N/A",
+};
 
 // "http://www.omdbapi.com/?i=tt3896198&apikey=f95bafff";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-
+  const [searchTerm, setSearchTerm] = useState(" ");
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
@@ -33,23 +40,22 @@ const App = () => {
 
       <div className="search">
         <input
-          value="superman"
-          onChange={() => {}}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search for movies"
         />
         <img
           src={SearchIcon}
           alt="search"
-          onClick={() => {}}
+          onClick={() => searchMovies(searchTerm)}
         />
       </div>
 
       {movies?.length > 0 ? (
-
         <div className="container">
-          {<movies.map((movie) => (<MovieCard movie={movie} />
+          {movies.map((movie) => (
+            <MovieCard movie={movie} />
           ))}
-
         </div>
       ) : (
         <div className="empty">
