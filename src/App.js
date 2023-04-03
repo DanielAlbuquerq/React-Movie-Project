@@ -2,20 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./App.css";
 import SearchIcon from "./search.svg";
-import MovieCard from "./MovieCard";
+import MovieCard from "./MovieCard.jsx";
 //f95bafff
 
 //http://www.omdbapi.com/?i=tt3896198&apikey=f95bafff
 
 const API_URL = "http://www.omdbapi.com/?apikey=f95bafff";
 
-const movie1 = {
-  Title: "Spiderman the Verse",
-  Year: "2019",
-  imdbID: "tt12122034",
-  Type: "series",
-  Poster: "N/A",
-};
+// const movie1 = {
+//   Title: "Spiderman the Verse",
+//   Year: "2019",
+//   imdbID: "tt12122034",
+//   Type: "series",
+//   Poster: "N/A",
+// };
 
 // "http://www.omdbapi.com/?i=tt3896198&apikey=f95bafff";
 
