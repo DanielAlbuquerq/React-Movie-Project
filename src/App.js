@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>MovieLand</h1>
+      <a href="/" className="a_tittle">MovieLand</a>
 
       <div className="search">
         <input
